@@ -1,10 +1,11 @@
 {
   "expo": {
     "name": "BrandPeek",
-    "slug": "BrandPeek",
+    "slug": "brandPeek",
+    "description":"This is a BrandPeek App",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/brand.png",
     "scheme": "brandpeek",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
