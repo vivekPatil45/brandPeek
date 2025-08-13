@@ -6,19 +6,31 @@ import ErrorState from "@/components/ErrorState";
 import LoadingShimmer from "@/components/LoadingShimmer";
 import BrandCard from "@/components/BrandCard";
 import { useRouter } from "expo-router";
-import brandsData from "@/constants/brands.js";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { getBrands } from "@/services/api"
 
 export default function Index() {
   const router = useRouter();
-  const [brands, setBrands] = useState(brandsData);
+  const [brands, setBrands] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [refreshing, setRefreshing] = useState(false);
 
+  const fetchData = async () => {
+    setError(null);
+    const { data, error } = await getBrands();
+    if (error) setError(error);
+    setBrands(data?.slice(0, 10) || []);
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
-    // await fetchData(); // TODO: Replace with actual API call
+    await fetchData(); 
     setRefreshing(false);
   }, []);
 
