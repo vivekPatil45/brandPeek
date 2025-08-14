@@ -54,7 +54,7 @@ This project uses [MockAPI](https://mockapi.io/) for backend data.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/brandpeek.git
+   git clone https://github.com/vivekPatil45/brandpeek.git
    cd brandpeek
    ```
 2. Install dependencies:
