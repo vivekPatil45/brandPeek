@@ -2,7 +2,7 @@
   "expo": {
     "name": "BrandPeek",
     "slug": "brandPeek",
-    "description":"This is a BrandPeek App",
+    "description": "This is a BrandPeek App",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/brand.png",
@@ -17,7 +17,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.vivek45.brandPeek"
     },
     "web": {
       "bundler": "metro",
@@ -38,6 +39,19 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "97603336-a2ca-4392-93d3-e1172daf415a"
+      }
+    },
+    "owner": "vivek45",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/97603336-a2ca-4392-93d3-e1172daf415a"
     }
   }
 }

@@ -1,50 +1,91 @@
-# Welcome to your Expo app 👋
+# <img src="./assets/images/brand.png" alt="App Icon" width="40" height="40"> BrandPeek
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+BrandPeek is a modern brand discovery app built using **React Native** with **Expo**. It allows users to browse through a list of brands and view detailed information about each brand.
 
-1. Install dependencies
+## 📱 Features
+
+* **Home Screen**: Displays a list of brands fetched from an API.
+* **Brand Detail Screen**: Shows detailed info about a selected brand.
+* **Modern UI**: Clean design with gradients inspired by Nurdd aesthetics.
+* **Navigation**: Dynamic routing with `/brands/[id].jsx`.
+* **Responsive**: Works seamlessly on both Android and iOS.
+
+## 📁 Project Structure
+
+```
+/
+├── app
+│ ├── index.jsx # Home screen
+│ ├── /brands
+│ │ └── [id].jsx # Brand detail screen
+├── components # Reusable UI components
+├── constants # App constants (colors, API URLs, etc.)
+├── services # API service functions
+├── assets # Images, icons, app icon, etc.
+```
+
+---
+
+## 📡 Backend - MockAPI
+
+This project uses [MockAPI](https://mockapi.io/) for backend data.
+
+### **Schema: Brand**
+| Field            | Type      | Example Value                                                     |
+|------------------|-----------|-------------------------------------------------------------------|
+| `id`             | String    | `"1"`                                                             |
+| `name`           | String    | `"Oriental Rubber Chair"`                                         |
+| `logo`           | URL       | `"https://picsum.photos/seed/nWg3LPG/1419/1132"`                  |
+| `description`    | String    | `"Iure cognomen celo argumentum arx cogito recusandae."`          |
+| `fullDescription`| String    | `"Vix acsi maxime enim combibo aegre. Adsuesco animus..."`        |
+| `website`        | URL       | `"https://unkempt-pick.info/"`                                    |
+
+---
+
+### **API Endpoints**
+- **Get All Brands** → `https://<your-mockapi-url>/brands`
+- **Get Brand by ID** → `https://<your-mockapi-url>/brands/:id`
+
+---
+
+## 🚀 Installation & Running
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/brandpeek.git
+   cd brandpeek
+   ```
+2. Install dependencies:
 
    ```bash
    npm install
    ```
-
-2. Start the app
+3. Start the app:
 
    ```bash
    npx expo start
    ```
+4. Open in **Expo Go** app (scan QR code from terminal or browser).
+## 📤 Live Demo
 
-In the output, you'll find options to open the app in a
+* **Expo Go Link**: [Expo Project Link](https://expo.dev/accounts/vivek45/projects/brandPeek/builds/6a011577-f79b-4de0-b5ee-48e468d4bdee)
+* **QR Code**: Scan in Expo Go  
+  ![QR Code](./assets/images/qr.png)
+## 🛠 Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* **React Native**
+* **Expo**
+* **Expo Router**
+* **JavaScript (ES6)**
+* **REST API**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📌 Notes
 
-## Get a fresh project
+* Backend used: Public REST API for brand data
+* Folder structure is modular for scalability
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**Author:** Vivek Rakesh Patil
